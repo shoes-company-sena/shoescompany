@@ -60,8 +60,7 @@ public class ProductService implements IProductService {
         Category category = categoryRepository.findById(productDTO.getCategory())
                 .orElseThrow(() -> new Exception());
 
-
-        Brand brand = this.brandRepository.getReferenceById(productDTO.getBrand());
+        Brand brand = this.brandRepository.findById(productDTO.getBrand()).orElseThrow();
 
         Product productData = modelMapperUtils.map(productDTO, Product.class);
         productData.setCategory(category);

@@ -18,7 +18,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/v1")
 @Tag(name = "Productos", description = "Operaciones relacionadas con productos")
 public class ProductRESTController {
 

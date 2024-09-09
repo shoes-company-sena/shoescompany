@@ -29,7 +29,7 @@ public class Product extends Base{
     @Column(nullable = false)
     private Gender gender;
 
-    @OneToOne(targetEntity = Brand.class)
+    @ManyToOne(targetEntity = Brand.class)
     @JoinColumn(name = "brand_id" )
     private Brand brand;
 
